@@ -20,6 +20,9 @@ while i < len ( file ) :
   elif char == "-" :
     bottle [ bottle [ c ]] -= 1
     bottle [ bottle [ c ]] %= 256
+  elif char == "&" :
+    bottle [ c ], bottle [ bottle [ c ]] =\
+      bottle [ bottle [ c ]], bottle [ c ]
   elif char == "/" :
     st += bottle [ c ]
     st %= 256
